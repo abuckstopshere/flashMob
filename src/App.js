@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
 import Card from './Card/Card'
+import GoogleOAuth from './SocialLog/SocialLog'
+
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +41,9 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
+          <div className = "SocialLog"> 
+            <GoogleOAuth/>
+          </div>
         <div className = "prevCardColumn"></div>
         <div className = "mainCardColumn">
           <Card question = {this.state.currentCard.question} 
