@@ -1,58 +1,19 @@
 import React, { Component } from 'react'
+import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import './App.css'
-import Card from './Card/Card'
-import GoogleOAuth from './SocialLog/SocialLog'
+import Card from './components/Card/Card'
+import SocialLog from './components/SocialLog/SocialLog'
 
-
-class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      cards : [
-        {
-          id : 1 ,
-          question : "what is currently the bane of my existence with react?" ,
-          answer : "capitalization of the first letter in a word"
-        } , {
-          id : 2 ,
-          question : "where are you safe from bear attacks" ,
-          answer : "nowhere"
-        }
-      ] ,
-      currentCard : {}
-    }
-  }
-
-  componentWillMount() {
-    const currentCards = this.state.cards
-
-    this.setState({
-      cards : currentCards ,
-      currentCard : this.getRandomCard(currentCards)
-    })
-  }
-
-  getRandomCard(currentCards) {
-    let card = currentCards[Math.floor(Math.random() * currentCards.length)]
-    return(card)
-  }
-
-  render() {
-    return (
-      <div className = "App">
-          <div className = "SocialLog"> 
-            <GoogleOAuth/>
-          </div>
-        <div className = "prevCardColumn"></div>
-        <div className = "mainCardColumn">
-          <Card question = {this.state.currentCard.question} 
-                answer = {this.state.currentCard.answer}/>
-        </div>
-        <div className = "nextCardColumn"></div>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path = '/' component = {SocialLog} />
+          <Route exact path = '/Card' component = {Card} /> 
+       </Switch> 
+     </BrowserRouter>
+  )
 }
+
 
 export default App;
