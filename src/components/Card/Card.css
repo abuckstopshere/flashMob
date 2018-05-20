@@ -1,16 +1,16 @@
 .cardBox {
-    cursor: pointer ;
-    height: 400px ;
-    width: 400px ;
-    perspective: 800px ;
-    position: relative ;
-    margin: auto ;
-    transition: ease-in ;
+    cursor : pointer ;
+    height : 400px ;
+    width : 400px ;
+    perspective : 800px ;
+    position : relative ;
+    margin : auto ;
+    transition : ease-in ;
 }
 
 .card {
     height : 400px ;
-    width: 400px ;
+    width : 400px ;
     position : absolute ;
     border : 1px solid rgb(1, 100, 42) ;
     transform-style: preserve-3d ;
@@ -18,6 +18,6 @@
 }
 
 .card:hover {
-    transform: rotateY(180deg) ;
+    transform : rotateY(180deg) ;
     transition : all 0.4s ease-in-out ;
 }

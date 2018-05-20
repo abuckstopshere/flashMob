@@ -15,5 +15,4 @@ const GoogleOAuth = () => {
         />
     )
 }
-
 export default GoogleOAuth
