@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Card.css'
 
-
 class Card extends Component {
     constructor(props) {
       super(props)
@@ -10,8 +9,8 @@ class Card extends Component {
         cards : [
           {
             id : 1 ,
-            question : "what is currently the bane of my existence with react?" ,
-            answer : "capitalization of the first letter in a word"
+            question : "whats a test question?" ,
+            answer : "fuckin bullshit thats what"
           } , {
             id : 2 ,
             question : "where are you safe from bear attacks?" ,
@@ -38,14 +37,16 @@ class Card extends Component {
 
     render() {
         return(
-        <div className = "cardBox">
-            <div className = "card">
-                {this.state.currentCard.question}
-                <br/>
-                <br/>
-                {this.state.currentCard.answer}
-            </div>
-        </div>
+          <div className = "cardBox">
+              <div className = "card valign-wrapper">
+                <div className = "center-align">
+                  {this.state.currentCard.question}
+                  <br/>
+                  <br/>
+                  {this.state.currentCard.answer}
+                </div>
+              </div>
+          </div>
         )
     }
 }

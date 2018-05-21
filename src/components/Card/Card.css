@@ -9,15 +9,17 @@
 }
 
 .card {
+    background-color: rgba(0, 166, 255, 0.748) ;
+    text-align: center ;
     height : 400px ;
     width : 400px ;
     position : absolute ;
     border : 1px solid rgb(1, 100, 42) ;
     transform-style: preserve-3d ;
-    transition : all 0.4s ease-in-out ;
+    transition : all 0.2s ease-in-out ;
 }
 
-.card:hover {
+/* .card:hover {
     transform : rotateY(180deg) ;
-    transition : all 0.4s ease-in-out ;
-}
+    transition : all 0.2s ease-in-out ;
+} */
