@@ -1,19 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import './App.css'
-import Card from './components/Card/Card'
 import SocialLog from './components/SocialLog/SocialLog'
+import Dashboard from './components/Dashboard/Dashboard'
 
 const App = () => {
   return (
       <BrowserRouter>
         <Switch>
           <Route exact path = '/' component = {SocialLog} />
-          <Route exact path = '/Card' component = {Card} /> 
+          <Route exact path = '/Dashboard' component = {Dashboard} /> 
        </Switch> 
      </BrowserRouter>
   )
 }
 
-
-export default App;
+export default App
