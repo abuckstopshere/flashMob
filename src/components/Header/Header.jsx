@@ -3,6 +3,7 @@ import './Header.css'
 import Logo from './Logo'
 import Home from './Home'
 import Search from './Search'
+import AddASet from '../Header/AddASet'
 
 class Header extends Component {
     render() {
@@ -13,6 +14,8 @@ class Header extends Component {
                         <ul>
                             <li><Home /></li>
                             <li><Search /></li>
+                            <li><AddASet /></li>
+                            {/* <li><AddCard /></li> */}
                         </ul>
                     </div>
                 </div>
