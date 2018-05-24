@@ -1,6 +1,6 @@
 import React , { Component } from 'react'
 
-class Search extends Component {
+class SearchCards extends Component {
     render() {
         return (
             <a href = "/Search">
@@ -10,4 +10,4 @@ class Search extends Component {
     }
 }
 
-export default Search
+export default SearchCards
