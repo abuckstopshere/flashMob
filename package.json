@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
+    "express": "^4.16.3",
+=======
+>>>>>>> ddc7b484503307567097b1e025cf14a5829d5758
     "npm": "^6.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -17,5 +21,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "superawesomefuntimetobehad",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abuckstopshere/flashMob.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abuckstopshere/flashMob/issues"
+  },
+  "homepage": "https://github.com/abuckstopshere/flashMob#readme"
 }
