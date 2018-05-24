@@ -1,84 +1,89 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
+module.exports = orm = {
+    // User CRUD
+    // Create
 
-// Dependencies
-// =============================================================
+    /*
+    User model
+    User:
+    ID: integer
+    Sets: JSON object(s)
+    familyName: string
+    givenName: string
+    sets: [array of ints that match setIDs]
+    starredSets: [array of setIDs the user has starred or saved]
+    email: string (validate me for an @, length, and a .something)
+    authKey: (whats returned from login)
+    */
+    createUser: (userName, familyName, givenName, email, auth, cb) => {
+        var myobj = {
+            user: userName,
+            auth: auth,
+            familyName: familyName,
+            givenName: givenName,
+            email: email,
+            authKey: auth
+        };
+        // console.log(createRecord(myobj, "USERS"))
+        cb(createRecord(myobj, "USERS"))
+    },
 
-// Requiring our Todo model
-var db = require("../models");
+    getUserByID: (userID) => {
 
-// Routes
-// =============================================================
-module.exports = function(app) {
+    },
 
-  // GET route for getting all of the posts
-  app.get("/api/cards/", function(req, res) {
-    db.Post.findAll({})
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+    changeUserEmail: (userID, newEmail) => {
 
-  // Get route for returning posts of a specific category
-  app.get("/api/cards/category/:category", function(req, res) {
-    db.Post.findOne({
-      where: {
-        category: req.params.category
-      }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+    },
 
-  // Get route for retrieving a single post
-  app.get("/api/posts/:userId", function(req, res) {
-    db.Post.findOne({
-      where: {
-        id: req.params.userId
-      }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+    deleteUser: (userID) => {
 
-  // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
-    console.log(req.body);
-    db.Post.create({
-      title: req.body.title,
-      body: req.body.body,
-      category: req.body.category
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+    },
+    // Set CRUD
+    // CREATE
+    createSet: (userID, setName, categories) => {
 
-  // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
-    db.Post.destroy({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+    },
 
-  // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
-    db.Post.update(req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
-};
+    // READ
+    getSetByAuthor: (userID) => {
+
+    },
+
+    getSetsByCategory: (category) => {
+
+    },
+
+    getSetAll: () => {
+
+    },
+
+    // UPDATE
+    addSetCategory: (setID, newCategory) => {
+
+    },
+
+    deleteSet: (setID) => {
+
+    },
+    // Card CRUD
+    // CREATE
+    createCard: (setID, cardFront, cardBack) => {
+
+    },
+    // READ
+    getCardsBySet: (setID) => {
+
+    },
+    // UPDATE
+    updateCardFields: (cardID, newFront, newBack) => {
+
+    },
+    updateCardSet: (cardID, setID) => {
+
+    },
+
+    // DELETE
+    deleteCardByID: (cardID) => {
+
+    },
+}

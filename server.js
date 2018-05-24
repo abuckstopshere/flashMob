@@ -1,7 +1,5 @@
-import { posix } from "path";
-
 const express = require("express");
-const bodyParser = require("bodyParser");
+const bodyParser = require("body-parser");
 
 var app = express();
 
@@ -14,5 +12,4 @@ app.get('/api/hello', (req, res) =>{
     res.send({ express: 'Hello From Express' });
 });
 
-
-app.listen(PORT, () => console.log(`Listening on port ${port}`));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
