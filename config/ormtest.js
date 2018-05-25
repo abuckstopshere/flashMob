@@ -2,48 +2,28 @@ const orm = require('./orm')
 const assert = require('assert')
 
 let userID = ""
-// Test the create user functionality
-orm.createUser("malach", "michael", "mmalach7@ucsd.edu", "randomkey2348342#*#$#$*jlsdkf", (err, res) => {
-    if (err) throw err
-    console.log("Result from createUser is ")
-    console.log(res.ops[0])
-    userID = res.ops[0]._id
-    console.log("Test Data: User ID " + userID)
-    orm.getUserByID(userID, (err, res) => {
-        if (err) throw err
-        console.log("results from getUserbyID: ")
-        console.log(res)
+// "User Test Obj", but shorter
+let uto = {
+    familyName: "Malach",
+    givenName: "Michael",
+    email: "mmalach@ucsd.edu",
+    auth: "randomsetofcharacters23l4km34klm#$#$"
+}
+
+let uto2 = {
+    familyName: "Hemsworth",
+    givenName: "Christopher",
+    email: "chemsworth33@ucsd.edu",
+    auth: "anotherrandsetkeyslk234lkf"
+}
+
+
+
+
+orm.createUser(uto.familyName, uto.givenName, uto.email, uto.auth)
+    .then((fulfilled) => {
+        resolve("User Creation Test: Test successful, user created")
     })
-
-    orm.changeUserEmail(userID, "gmalach@gmail.com", (err, res) => {
-        if (err) {
-            console.log("There was a problem with updating")
-        } else {
-            console.log("Updated an email successfully")
-            orm.getUserByID(userID, (err, res) => {
-                if (err) throw err
-                console.log("results from getUserbyID: ")
-                console.log(res)
-                console.log("Update successful")
-
-                orm.deleteUser(userID, (err, res) => {
-                    if (err) {
-                        console.log("Error when deleting")
-                    } else {
-                        console.log("Successfully deleted ID" + userID)
-                    }
-                })
-            })
-        }
+    .catch((rejection) => {
+        reject("User Creation Test: Test failed, user not created")
     })
-
-})
-
-// Test the query by user ID functionality
-
-// this would create a async problem
-// orm.getUserByID(userID, (err, res) => {
-//     if (err) throw err
-//     console.log("results from getUserbyID: ")
-//     console.log(res)
-// })
