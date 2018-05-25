@@ -14,7 +14,7 @@ Methods can be used as follows:
 
 Creation
 
-    createUser(familyName, givenName, email, auth)
+    orm.createUser(familyName, givenName, email, auth)
     .then((fulfilled) => {
         // Code to handle your returned data goes here. On success, you will receive an object from the ORM containing your new user
     })
@@ -24,7 +24,7 @@ Creation
 
 Querying for a user
 
-    getUserByID(userID)
+    orm.getUserByID(userID)
     .then((fulfilled) => {
         // On success, you will be returned an array of the user who matches your query. This function should always only return one user
     }).catch((rejected) => {
@@ -33,7 +33,7 @@ Querying for a user
 
 Change a users email
 
-    changeUserEmail(userID, newEmail)
+    orm.changeUserEmail(userID, newEmail)
     .then((fulfilled) => {
         // Upon fulfillment, returns the new user's object
     })
@@ -47,3 +47,5 @@ Deleting a user
     .then((fulfilled) => {
         // I'm actually not sure what this returns. Papa bless
     })
+
+
