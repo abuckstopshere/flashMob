@@ -1,3 +1,4 @@
 .nav-wrapper {
-    background-color: rgba(245, 127, 0, 0.789) ;
+    background-color: rgba(245, 127, 0, 0.0) ;
+    opacity: 5%;
 }

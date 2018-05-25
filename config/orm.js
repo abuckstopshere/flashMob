@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/flashmob_db";
-const dbName = 'flashmob_db'
+const dbName = 'flashmob_db';
 
 module.exports = orm = {
     // User CRUD
@@ -18,58 +18,80 @@ module.exports = orm = {
     email: string (validate me for an @, length, and a .something)
     authKey: (whats returned from login)
     */
-    createUser: (familyName, givenName, email, auth, cb) => {
+    createUser: (familyName, givenName, email, auth) => {
         var myobj = {
             familyName: familyName,
             givenName: givenName,
             email: email,
             authKey: auth
         };
-
-        // Validation to ensure that we don't create a user with duplicate email
         let query = {
             email: email
         }
-        let search = getOne(query, "USERS", (err, res) => {
-            console.log("CreateUser: Validation search initiated ")
-            console.log(res)
-            console.log("CreateUser: Validation search ended")
-            if (!res) {
-                createRecord(myobj, "USERS", cb)
-            } else {
-                console.log("CreateUser: There was an attempt to create a user, failed: email already exists")
-                return "CreateUser: Did not create record, email already exists"
-            }
+        return new Promise((resolve, reject) => {
+            // Validation to ensure that we don't create a user with duplicate email
+            // TODO: Update to use validation here
+            lookForExisting(query, "USERS", (err, res) => {
+                if (res) {
+                    console.log("createUser: User not created, email conflict found. Returning conflicting objects")
+                    reject(res)
+                } else {
+                    console.log("createUser: No conflicts found, creating user")
+                    createRecord(myobj, "USERS", (err, res) => {
+                        if (err) throw err
+                        resolve(res)
+                    })
+                }
+            })
         })
 
-
-        // console.log(createRecord(myobj, "USERS"))
-        // createRecord(myobj, "USERS", cb)
     },
 
-    getUserByID: (userID, cb) => {
+    getUserByID: (userID) => {
         let query = {
             "_id": userID
         }
-
-        getOne(query, "USERS", cb)
-
+        return new Promise((resolve, reject) => {
+            console.log("DEBUG: Resolving your getuser promise")
+            getQuery(query, "USERS", (err, res) => {
+                if (err) {
+                    console.log("GetUserByID: Error at getOne query")
+                    reject(err)
+                }
+                resolve(res)
+            })
+        })
     },
 
-    changeUserEmail: (userID, newEmail, cb) => {
-
+    changeUserEmail: (userID, newEmail) => {
         let query = {
             "_id": userID
         }
-
         let updateArg = {
             email: newEmail,
             updated_at: Date.now()
         }
-
-        updateEntry(query, {
-            $set: updateArg
-        }, "USERS", cb)
+        let validateQuery = {
+            email: newEmail
+        }
+        return new Promise((resolve, reject) => {
+            lookForExisting(validateQuery, "USERS", (err, res) => {
+                if (res) {
+                    console.log("changeUserEmail: User not created, email conflict found. Returning conflicting objects")
+                    reject(res)
+                } else {
+                    console.log("changeUserEmail: No conflicts found, creating user")
+                    updateEntry(query, {
+                        $set: updateArg
+                    }, "USERS", (err, res) => {
+                        if (err) {
+                            reject(err)
+                        };
+                        resolve(res)
+                    });
+                }
+            })
+        })
     },
 
     deleteUser: (userID, cb) => {
@@ -81,7 +103,18 @@ module.exports = orm = {
     },
     // Set CRUD
     // CREATE
-    createSet: (userID, setName, categories) => {
+    // This function takes in the ID from the user generating it, a string for the set
+    // name, and an array of strings for later indexing and searching by category
+    // No validation required, users can have multiple sets with same names. Each set
+    // though will be assigned a unique _id field by mongoDB
+    createSet: (userID, setName, categories, cb) => {
+        let newSet = {
+            FK: userID,
+            setName: setName,
+            categories: categories
+        }
+
+        createRecord(newSet, "SETS", cb)
 
     },
 
@@ -140,35 +173,47 @@ function createRecord(obj, cnName, cb) {
 
     MongoClient.connect(url, function (err, client) {
         if (err) {
-            throw err
+            console.log("CreateRecord: Error at connection")
+            cb(err, res)
         }
         const db = client.db(dbName);
         const collection = db.collection(cnName)
 
         collection.insertOne(obj, (err, res) => {
             if (err) {
-                console.log("createRecord: Error at create user function: " + err)
+                console.log("createRecord: Error at create user function")
+                client.close()
+                cb(err, res)
             }
             console.log("createRecord: Created one record")
-            client.close();
+            client.close()
             cb(err, res)
         });
     });
 }
 
-function getOne(query, cnName, cb) {
-
+// Queries the table and returns an array of results. It should always return
+// an array, but will check for a length 0 array and make it null for validation
+function getQuery(query, cnName, cb) {
     MongoClient.connect(url, function (err, client) {
         if (err) {
-            throw err
+            console.log("getOne: Error at connection")
+            cb(err, res)
         }
         const db = client.db(dbName);
         const collection = db.collection(cnName)
+
         collection.find(query).toArray(function (err, res) {
-            // console.log(res);
-            console.log("getOne: One record retrieved")
+            if (err) {
+                console.log("getOne: Error at query")
+            } else if (res.length === 0) {
+                console.log("getOne: found no entries matching your query")
+                res = null
+            } else {
+                console.log("getOne: At least one record retrieved")
+            }
             client.close();
-            cb(err, res[0])
+            cb(err, res)
         });
     })
 }
@@ -181,7 +226,6 @@ function updateEntry(query, updateData, cnName, cb) {
         const db = client.db(dbName)
         const collection = db.collection(cnName)
         collection.updateOne(query, updateData, function (err, res) {
-            // console.log(res)
             console.log("updateEntry: One record updated")
             client.close()
             cb(err, res)
@@ -200,5 +244,24 @@ function deleteEntry(myquery, cnName, cb) {
             client.close();
             cb(err, res)
         });
+    })
+}
+
+// A wrapper for the querying function that acts as a more easily readable
+// validation for some of my functions. Returns null on a 0 length array, 
+// and if results are round returns them
+function lookForExisting(firstQuery, cnName, cb) {
+    getQuery(firstQuery, cnName, (err, res) => {
+        if (err) {
+            console.log("lookForExisting: Error in query")
+            throw err
+        }
+        if (!res) {
+            console.log("lookForExisting: No record found, returning false")
+        }
+        if (res) {
+            console.log("lookForExisting: Record found, returning")
+        }
+        cb(err, res)
     })
 }
