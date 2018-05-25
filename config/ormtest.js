@@ -6,14 +6,14 @@ let userID = ""
 let uto = {
     familyName: "Malach",
     givenName: "Michael",
-    email: "elizabeth@ucsd.edu",
+    email: "elizabe43th@ucsd.edu",
     auth: "randomsetofcharacters23l4km34klm#$#$"
 }
 
 let uto2 = {
     familyName: "Hemsworth",
     givenName: "Christopher",
-    email: "chemsworth33@ucsd.edu",
+    email: "chemswor3th33@ucsd.edu",
     auth: "anotherrandsetkeyslk234lkf"
 }
 
@@ -78,7 +78,7 @@ orm.createUser(uto.familyName, uto.givenName, uto.email, uto.auth)
     })
     .then((userID) => {
         return new Promise((resolve, reject) => {
-            orm.changeUserEmail(userID, "second@email.com")
+            orm.changeUserEmail(userID, "seco4nd@email.com")
             .then((fulfilled) => {
                 console.log("User CRUD Test SUCCESS: Changed user email")
                 resolve(userID)
@@ -96,6 +96,7 @@ orm.createUser(uto.familyName, uto.givenName, uto.email, uto.auth)
             })
             .catch((rejected) => {
                 console.log("User CRUD Test SUCCESS: Failed to change to duplicate email")
+                resolve(userID)
             })
         })
     })
