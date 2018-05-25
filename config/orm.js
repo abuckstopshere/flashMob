@@ -94,12 +94,17 @@ module.exports = orm = {
         })
     },
 
-    deleteUser: (userID, cb) => {
+    deleteUser: (userID) => {
         let myquery = {
             "_id": userID
         }
+        return new Promise ((resolve, reject) => {
+            deleteEntry(myquery, "USERS", (err, res) => {
+                if (err) throw err
+                resolve(res)
+            })
 
-        deleteEntry(myquery, "USERS", cb)
+        })
     },
     // Set CRUD
     // CREATE
