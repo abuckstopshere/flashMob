@@ -57,6 +57,8 @@ module.exports = orm = {
                 if (err) {
                     console.log("GetUserByID: Error at getOne query")
                     reject(err)
+                } else if (res === null) {
+                    reject("No user matching that criteria found")
                 }
                 resolve(res)
             })
@@ -86,7 +88,9 @@ module.exports = orm = {
                     }, "USERS", (err, res) => {
                         if (err) {
                             reject(err)
-                        };
+                        } else if (res === null) {
+                            reject("No users matching that criteria found")
+                        }
                         resolve(res)
                     });
                 }
@@ -94,12 +98,17 @@ module.exports = orm = {
         })
     },
 
-    deleteUser: (userID, cb) => {
+    deleteUser: (userID) => {
         let myquery = {
             "_id": userID
         }
+        return new Promise((resolve, reject) => {
+            deleteEntry(myquery, "USERS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
 
-        deleteEntry(myquery, "USERS", cb)
+        })
     },
     // Set CRUD
     // CREATE
