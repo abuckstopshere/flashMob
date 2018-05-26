@@ -4,10 +4,15 @@
   "private": true,
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "express": "^4.16.3",
 =======
 >>>>>>> ddc7b484503307567097b1e025cf14a5829d5758
     "npm": "^6.0.1",
+=======
+    "mongodb": "^3.1.0-beta4",
+    "npm": "^6.1.0",
+>>>>>>> 28c1aa65f7af1aa1243e2abb8b50dcfbf24c6936
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-facebook-login-component": "^0.9.2",
