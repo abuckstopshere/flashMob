@@ -9,7 +9,7 @@ class AddSet extends Component {
          <Row>
              <Col s = {8} >
                 <Input s = {6} label = "Name" />
-                <Input s = {6} label = "Cateogies" />
+                <Input s = {6} label = "Categories" />
                 <Button waves='light'>Submit</Button>
              </Col>
         </Row>
