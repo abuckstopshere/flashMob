@@ -161,7 +161,7 @@ module.exports = orm = {
         return new Promise((resolve, reject) => {
             getQuery(queryObj, "SETS", (err, res) => {
                 if (err) reject(err)
-                reolsve(res)
+                resolve(res)
             })
         })
     },
