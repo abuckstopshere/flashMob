@@ -7,15 +7,6 @@ class AddSet extends Component {
 
     render() {
         return(
-<<<<<<< HEAD
-         <Row>
-             <Col s = {8} >
-                <Input s = {6} label = "Name" />
-                <Input s = {6} label = "Categories" />
-                <Button waves='light'>Submit</Button>
-             </Col>
-        </Row>
-=======
         <div>
             <Row>
                 <Header />
@@ -28,7 +19,6 @@ class AddSet extends Component {
                 </Col>
             </Row>
         </div>
->>>>>>> master
         )
     }
 }
