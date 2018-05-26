@@ -161,7 +161,7 @@ module.exports = orm = {
         return new Promise((resolve, reject) => {
             getQuery(queryObj, "SETS", (err, res) => {
                 if (err) reject(err)
-                reolsve(res)
+                resolve(res)
             })
         })
     },
@@ -273,7 +273,7 @@ function getQuery(query, cnName, cb) {
     MongoClient.connect(url, function (err, client) {
         if (err) {
             console.log("getOne: Error at connection")
-            cb(err, res)
+            cb(err, client)
         }
         const db = client.db(dbName);
         const collection = db.collection(cnName)

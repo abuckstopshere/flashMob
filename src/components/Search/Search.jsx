@@ -1,9 +1,9 @@
 import React , { Component } from 'react'
 import { Row , Col , Input , Button } from 'react-materialize'
 import Header from '../Header/Header'
-// import 'AddSet.css'
+// import 'SearchCards.css'
 
-class AddSet extends Component {
+class Search extends Component {
 
     render() {
         return(
@@ -13,8 +13,8 @@ class AddSet extends Component {
             </Row>
             <Row>
                 <Col s = {8} >
-                    <Input s = {6} label = "Name" />
-                    <Input s = {6} label = "Categories" />
+                    <Input s = {6} label = "Search By Name" />
+                    <Input s = {6} label = "Search By Categories" />
                     <Button waves='light'>Submit</Button>
                 </Col>
             </Row>
@@ -23,4 +23,4 @@ class AddSet extends Component {
     }
 }
 
-export default AddSet
+export default Search
