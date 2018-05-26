@@ -10,7 +10,7 @@ import Logout from '../Header/Logout'
 class Header extends Component {
     render() {
         return (
-            <nav>
+            <nav className = "transparent">
                 <div className = "nav-wrapper">
                     <div className = "left">
                         <ul>

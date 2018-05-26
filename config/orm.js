@@ -207,7 +207,7 @@ function getQuery(query, cnName, cb) {
     MongoClient.connect(url, function (err, client) {
         if (err) {
             console.log("getOne: Error at connection")
-            cb(err, res)
+            cb(err, client)
         }
         const db = client.db(dbName);
         const collection = db.collection(cnName)
