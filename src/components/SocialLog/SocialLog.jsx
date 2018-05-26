@@ -5,8 +5,8 @@ import FacebookOAuth from './FacebookOAuth'
 const SocialLog = () => {
     return (
     <div className = "col 6 offset-6 middle">
-        <GoogleOAuth />
-        <FacebookOAuth />
+            <GoogleOAuth />
+            <FacebookOAuth />
     </div>
     )
 }
