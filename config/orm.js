@@ -36,7 +36,6 @@ module.exports = orm = {
                     console.log("createUser: User not created, email conflict found. Returning conflicting objects")
                     reject(res)
                 } else {
-                    console.log("createUser: No conflicts found, creating user")
                     createRecord(myobj, "USERS", (err, res) => {
                         if (err) throw err
                         resolve(res)
@@ -52,11 +51,12 @@ module.exports = orm = {
             "_id": userID
         }
         return new Promise((resolve, reject) => {
-            console.log("DEBUG: Resolving your getuser promise")
             getQuery(query, "USERS", (err, res) => {
                 if (err) {
                     console.log("GetUserByID: Error at getOne query")
                     reject(err)
+                } else if (res === null) {
+                    reject("No user matching that criteria found")
                 }
                 resolve(res)
             })
@@ -86,7 +86,9 @@ module.exports = orm = {
                     }, "USERS", (err, res) => {
                         if (err) {
                             reject(err)
-                        };
+                        } else if (res === null) {
+                            reject("No users matching that criteria found")
+                        }
                         resolve(res)
                     });
                 }
@@ -94,12 +96,17 @@ module.exports = orm = {
         })
     },
 
-    deleteUser: (userID, cb) => {
+    deleteUser: (userID) => {
         let myquery = {
             "_id": userID
         }
+        return new Promise((resolve, reject) => {
+            deleteEntry(myquery, "USERS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
 
-        deleteEntry(myquery, "USERS", cb)
+        })
     },
     // Set CRUD
     // CREATE
@@ -113,46 +120,106 @@ module.exports = orm = {
             setName: setName,
             categories: categories
         }
-
-        createRecord(newSet, "SETS", cb)
-
+        return new Promise((resolve, reject) => {
+            createRecord(newSet, "SETS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
     },
 
     // READ
     getSetByAuthor: (userID) => {
-
+        let queryObj = {
+            FK: userID
+        }
+        return new Promise((resolve, reject) => {
+            getQuery(queryObj, "SETS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
     },
 
     getSetsByCategory: (category) => {
+        let queryObj = {
+            categories: category
+        }
+        return new Promise((resolve, reject) => {
+            getQuery(queryObj, "SETS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
 
     },
 
     getSetAll: () => {
+        let queryObj = {
 
+        }
+        return new Promise((resolve, reject) => {
+            getQuery(queryObj, "SETS", (err, res) => {
+                if (err) reject(err)
+                reolsve(res)
+            })
+        })
     },
 
     // UPDATE
+    // TODO: Maybe, if someone asks for it
     addSetCategory: (setID, newCategory) => {
 
     },
 
+
     deleteSet: (setID) => {
-
-        deleteEntry(setID)
-
+        return new Promise((resolve, reject) => {
+            deleteEntry({
+                _id: setID
+            }, "SETS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
     },
     // Card CRUD
     // CREATE
     createCard: (setID, cardFront, cardBack) => {
-
+        let newObj = {
+            FK: setID,
+            cardFront: cardFront,
+            cardBack: cardBack
+        }
+        return new Promise((resolve, reject) => {
+            createRecord(newObj, "CARDS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
     },
     // READ
     getCardsBySet: (setID) => {
-
+        let queryObj = {
+            _id: setID
+        }
+        return new Promise((resolve, reject) => {
+            getQuery(queryObj, "CARDS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
     },
     // UPDATE
-    updateCardFields: (cardID, newFront, newBack) => {
 
+    // TODO
+    updateCardFields: (cardID, newFront, newBack) => {
+        let queryObj = {
+            _id: cardID
+        }
+        return new Promise((response, reject) => {
+
+        })
     },
     updateCardSet: (cardID, setID) => {
 
@@ -160,7 +227,15 @@ module.exports = orm = {
 
     // DELETE
     deleteCardByID: (cardID) => {
-
+        let queryObj = {
+            _id: cardID
+        }
+        return new Promise((resolve, reject) => {
+            deleteEntry(queryObj, "CARDS", (err, res) => {
+                if (err) reject(err)
+                resolve(res)
+            })
+        })
     },
 }
 
@@ -219,6 +294,7 @@ function getQuery(query, cnName, cb) {
 }
 
 function updateEntry(query, updateData, cnName, cb) {
+    updateData.updated_at = Date.now()
     MongoClient.connect(url, function (err, client) {
         if (err) {
             throw err
