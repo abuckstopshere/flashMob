@@ -9,9 +9,9 @@
 }
 
 .card {
-    background-color: rgba(0, 166, 255, 0.748) ;
+    background : url('../../images/ruledPaper.jpg') center no-repeat;
     text-align: center ;
-    height : 400px ;
+    height : 300px ;
     width : 400px ;
     position : absolute ;
     border : 1px solid rgb(1, 100, 42) ;
@@ -19,7 +19,7 @@
     transition : all 0.2s ease-in-out ;
 }
 
-/* .card:hover {
+.card:hover {
     transform : rotateY(180deg) ;
     transition : all 0.2s ease-in-out ;
-} */
+}

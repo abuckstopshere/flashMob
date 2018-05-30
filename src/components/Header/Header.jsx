@@ -1,4 +1,4 @@
-import React , { Component } from 'react'
+import React from 'react'
 import './Header.css'
 import Logo from './Logo'
 import Home from './Home'
@@ -7,8 +7,7 @@ import AddASet from '../Header/AddASet'
 import AddACard from '../Header/AddACard'
 import Logout from '../Header/Logout'
 
-class Header extends Component {
-    render() {
+const Header = (props) => {
         return (
             <nav className = "transparent">
                 <div className = "nav-wrapper">
@@ -22,6 +21,7 @@ class Header extends Component {
                     </div>
                     <div className = "right">
                         <ul>
+                            <li>{props.welcome}</li>
                             <li><Logout /></li>
                         </ul>
                     </div>
@@ -29,6 +29,5 @@ class Header extends Component {
             </nav>
         )
     }
-}
 
 export default Header

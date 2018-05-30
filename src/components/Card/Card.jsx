@@ -39,7 +39,7 @@ class Card extends Component {
         return(
           <div className = "cardBox">
               <div className = "card valign-wrapper">
-                <div className = "center-align">
+                <div className = "text-center">
                   {this.state.currentCard.question}
                   <br/>
                   <br/>

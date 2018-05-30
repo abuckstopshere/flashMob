@@ -1,15 +1,16 @@
 import React , { Component } from 'react'
 import { Row , Col , Input , Button, Icon, NavItem, Badge, Dropdown } from 'react-materialize'
 import Header from '../Header/Header'
+<<<<<<< HEAD
 import Dashboard from '../Dashboard/Dashboard';
 
 
 
 // import 'AddSet.css'
+=======
+>>>>>>> 4eb0971d3e2d144d8f67382fd708cc2fbbd6ec5d
 
-class AddSet extends Component {
-
-    render() {
+const AddSet = (props) => {
         return(
         <div>
             <Row>
@@ -26,6 +27,5 @@ class AddSet extends Component {
         </div>
         )
     }
-}
 
 export default AddSet

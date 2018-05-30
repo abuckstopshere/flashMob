@@ -1,5 +1,5 @@
 import React , { Component } from 'react'
-import { Div , Row , Col , Input , Button } from 'react-materialize'
+import { Row , Col , Input , Button } from 'react-materialize'
 import Header from '../Header/Header'
 import Dropdown from 'react-materialize/lib/Dropdown';
 // import 'AddCard.css'
@@ -8,10 +8,10 @@ class AddCard extends Component {
 
     render() {
         return(
-            <div>
-                <Row>
+            <div className = "valign-center">
+                <div className = "row">
                     <Header />
-                </Row>
+                </div>
                 <Row>
                     <Col s = {8} >
                     
