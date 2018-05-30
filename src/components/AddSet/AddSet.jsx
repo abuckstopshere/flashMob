@@ -1,11 +1,8 @@
 import React , { Component } from 'react'
 import { Row , Col , Input , Button } from 'react-materialize'
 import Header from '../Header/Header'
-// import 'AddSet.css'
 
-class AddSet extends Component {
-
-    render() {
+const AddSet = (props) => {
         return(
         <div>
             <Row>
@@ -21,6 +18,5 @@ class AddSet extends Component {
         </div>
         )
     }
-}
 
 export default AddSet

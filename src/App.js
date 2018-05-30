@@ -1,5 +1,4 @@
 import React , { Component } from 'react'
-import { GoogleLogin } from 'react-google-login'
 import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import './App.css'
 import SocialLog from './components/SocialLog/SocialLog'
@@ -16,6 +15,10 @@ class App extends Component {
       user : null ,
       username : "" ,
       welcome : "" ,
+      email : null ,
+      googleId : null ,
+      facebookId : null ,
+      userImage : null ,
       redirectToDash : false ,
     }
     this.responseGoogle = this.responseGoogle.bind(this)
@@ -25,25 +28,27 @@ class App extends Component {
   responseGoogle = (response) => {
     console.log(response)
     if(response.accessToken) {
-        let name = response.profileObj.name
         this.setState({
           redirectToDash : true ,
           user : true ,
-          username : name
-        
+          username : response.profileObj.name ,
+          email : response.profileObj.email ,
+          googleId : response.googleId ,
+          userImage : response.profileObj.imageUrl ,
+          welcome : `Howdy, ${response.profileObj.name}!`
         })
     }
   }
-
-  // onSuccess = () => {
-  //   this.responseFacebook()
-  // } 
 
   responseFacebook = (response) => {
     console.log(response)
     if(response.accessToken) {
         this.setState({
-          redirectToDash : true
+          redirectToDash : true ,
+          username : response.name ,
+          email : response.email ,
+          facebookId : response.id ,
+          welcome : `Howdy, ${response.name}!`
         })
     }
   }
@@ -52,17 +57,21 @@ class App extends Component {
     return (
         <BrowserRouter>
           <Switch>
-            {/* <Route exact path = '/' component = {SocialLog}
-              user={this.state.user}
-              username={this.state.username}
-              responseGoogle={this.responseGoogle}
-              responseFacebook={this.responseFacebook}
-            /> */}
-            <Route exact path = '/' render = {()=> <SocialLog 
-                                                    user = {this.state.user}
-                                                    username = {this.state.username}
-                                                    responseGoogle={this.responseGoogle}/>} />
-            <Route exact path = '/Dashboard' component = {Dashboard} /> 
+            <Route exact path = '/' render = {()=> 
+                <SocialLog 
+                  user = {this.state.user}
+                  username = {this.state.username}
+                  responseGoogle = {this.responseGoogle}
+                  responseFacebook = {this.responseFacebook}
+                  redirectToDash = {this.state.redirectToDash} />} 
+            />
+            <Route exact path = '/Dashboard'  render = {()=> 
+                <Dashboard
+                  username = {this.state.username}
+                  welcome = {this.state.welcome} 
+                  redirectToDash = {this.state.redirectToDash}
+                  />}
+            /> 
             <Route exact path = '/AddSet' component = {AddSet} />
             <Route exact path = '/AddCard' component = {AddCard} />
             <Route exact path = '/Search' component = {Search} />
