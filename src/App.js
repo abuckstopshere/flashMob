@@ -1,4 +1,5 @@
 import React , { Component } from 'react'
+import { GoogleLogin } from 'react-google-login'
 import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import './App.css'
 import SocialLog from './components/SocialLog/SocialLog'
@@ -14,20 +15,49 @@ class App extends Component {
     this.state = {
       user : null ,
       username : "" ,
-      welcome : ""
+      welcome : "" ,
+      redirectToDash : false ,
+    }
+    this.responseGoogle = this.responseGoogle.bind(this)
+    this.responseFacebook = this.responseFacebook.bind(this)
+  }
+
+  responseGoogle = (response) => {
+    console.log(response)
+    if(response.accessToken) {
+        let name = response.profileObj.name
+        this.setState({
+          redirectToDash : true ,
+          user : true ,
+          username : name
+        
+        })
     }
   }
 
-  isUserLogged = () => {
-      return!!this.state.user
+  // onSuccess = () => {
+  //   this.responseFacebook()
+  // } 
+
+  responseFacebook = (response) => {
+    console.log(response)
+    if(response.accessToken) {
+        this.setState({
+          redirectToDash : true
+        })
     }
-  
+  }
 
   render() {
     return (
         <BrowserRouter>
           <Switch>
-            <Route exact path = '/' component = {SocialLog} />
+            <Route exact path = '/' component = {SocialLog}
+              user = {this.state.user}
+              username = {this.state.username}
+              responseGoogle = {this.state.responseGoogle}
+              responseFacebook = {this.state.responseFacebook}
+            />
             <Route exact path = '/Dashboard' component = {Dashboard} /> 
             <Route exact path = '/AddSet' component = {AddSet} />
             <Route exact path = '/AddCard' component = {AddCard} />
