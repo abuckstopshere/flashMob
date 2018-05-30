@@ -49,3 +49,27 @@ Deleting a user
     })
 
 
+# FlashMOB txt to card conversion tool
+
+Using an ANKI plug-in that converts their cards to a .txt file format, you can import those cards straight into our database using this tool.
+
+For instance, you want to import a file called
+
+`biology.txt` 
+
+into a set called
+
+`biology` with the category `biology`
+
+The syntax for the CLI converter is as follows
+
+`node conversionTool.js <set name> <set category> <file name>`
+
+File name does need the extension, but as long as it's in the `./config/data/` directory, we'll take care of the pathing. So for your biology.txt file the CLI input would look like so
+
+`node conversionTool.js biology biology biology.txt` (sorry for not using something more interesting)
+
+For a more interesting example, here's how you'd input the guitar flashcard set
+
+`node conversionTool.js 'guitar cards' music 'Nashville Numbers - Fretboard Anatomy GuitarOS.txt'`
+
