@@ -1,5 +1,8 @@
 .left {
     background-color: rgba(245, 127, 0, 0.0) ;
     opacity: 5%;
-    text-shadow: 5px;
+}
+
+nav {
+    font-size : 1.5em ;
 }
