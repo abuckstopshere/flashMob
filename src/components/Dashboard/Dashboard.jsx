@@ -1,15 +1,22 @@
-import React , { Component } from 'react'
+import React from 'react'
+import { Redirect } from 'react-router-dom'
 import Card from '../Card/Card'
 import Header from '../Header/Header'
 import Button from '../Button/Button'
 
-class Dashboard extends Component {
-    render() {
+const Dashboard = (props) => {
+
+    // if(props.redirectToDash !== true){
+    //     return <Redirect to = {'./'} />
+    // }
         return (
             <div className = "bigContainer">
                 <div className = "row">
                     <div className = "headerNav">
-                        <Header />
+                        <Header 
+                            username = {props.username}
+                            welcome = {props.welcome}
+                        />
                     </div>
                 </div>
                 <div className = "row">
@@ -25,6 +32,5 @@ class Dashboard extends Component {
             </div>
         )
     }
-}
 
 export default Dashboard

@@ -14,21 +14,64 @@ class App extends Component {
     this.state = {
       user : null ,
       username : "" ,
-      welcome : ""
+      welcome : "" ,
+      email : null ,
+      googleId : null ,
+      facebookId : null ,
+      userImage : null ,
+      redirectToDash : false ,
+    }
+    this.responseGoogle = this.responseGoogle.bind(this)
+    this.responseFacebook = this.responseFacebook.bind(this)
+  }
+
+  responseGoogle = (response) => {
+    console.log(response)
+    if(response.accessToken) {
+        this.setState({
+          redirectToDash : true ,
+          user : true ,
+          username : response.profileObj.name ,
+          email : response.profileObj.email ,
+          googleId : response.googleId ,
+          userImage : response.profileObj.imageUrl ,
+          welcome : `Howdy, ${response.profileObj.name}!`
+        })
     }
   }
 
-  isUserLogged = () => {
-      return!!this.state.user
+  responseFacebook = (response) => {
+    console.log(response)
+    if(response.accessToken) {
+        this.setState({
+          redirectToDash : true ,
+          username : response.name ,
+          email : response.email ,
+          facebookId : response.id ,
+          welcome : `Howdy, ${response.name}!`
+        })
     }
-  
+  }
 
   render() {
     return (
         <BrowserRouter>
           <Switch>
-            <Route exact path = '/' component = {SocialLog} />
-            <Route exact path = '/Dashboard' component = {Dashboard} /> 
+            <Route exact path = '/' render = {()=> 
+                <SocialLog 
+                  user = {this.state.user}
+                  username = {this.state.username}
+                  responseGoogle = {this.responseGoogle}
+                  responseFacebook = {this.responseFacebook}
+                  redirectToDash = {this.state.redirectToDash} />} 
+            />
+            <Route exact path = '/Dashboard'  render = {()=> 
+                <Dashboard
+                  username = {this.state.username}
+                  welcome = {this.state.welcome} 
+                  redirectToDash = {this.state.redirectToDash}
+                  />}
+            /> 
             <Route exact path = '/AddSet' component = {AddSet} />
             <Route exact path = '/AddCard' component = {AddCard} />
             <Route exact path = '/Search' component = {Search} />
