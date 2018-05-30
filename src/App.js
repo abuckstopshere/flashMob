@@ -52,12 +52,16 @@ class App extends Component {
     return (
         <BrowserRouter>
           <Switch>
-            <Route exact path = '/' component = {SocialLog}
-              user = {this.state.user}
-              username = {this.state.username}
-              responseGoogle = {this.state.responseGoogle}
-              responseFacebook = {this.state.responseFacebook}
-            />
+            {/* <Route exact path = '/' component = {SocialLog}
+              user={this.state.user}
+              username={this.state.username}
+              responseGoogle={this.responseGoogle}
+              responseFacebook={this.responseFacebook}
+            /> */}
+            <Route exact path = '/' render = {()=> <SocialLog 
+                                                    user = {this.state.user}
+                                                    username = {this.state.username}
+                                                    responseGoogle={this.responseGoogle}/>} />
             <Route exact path = '/Dashboard' component = {Dashboard} /> 
             <Route exact path = '/AddSet' component = {AddSet} />
             <Route exact path = '/AddCard' component = {AddCard} />
