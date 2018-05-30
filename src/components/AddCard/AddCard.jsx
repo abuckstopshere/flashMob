@@ -7,10 +7,10 @@ class AddCard extends Component {
 
     render() {
         return(
-            <div>
-                <Row>
+            <div className = "valign-center">
+                <div className = "row">
                     <Header />
-                </Row>
+                </div>
                 <Row>
                     <Col s = {8} >
                         <Input s = {6} label = "Question" />
