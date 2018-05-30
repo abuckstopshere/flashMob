@@ -1,0 +1,88 @@
+in which form does the genetic material of a eukariote exist within the nucleus	linear chromosomes
+what is the definition of speciation	the generation of new species by evolution
+in which phase so the cells grow and multiply at the maximum rate	exponential
+what are the factors affecting food security	quantity<div>quality</div><div>access</div>
+what is outbreeding	&nbsp;the fusion of two gametes from unrelated members of the same species
+what is considered appeasement behavior in primates	grooming
+what term describes a species that humans have moved either intentionally or accidentally to new geographic locations	introduced
+how do you store DNA is prokariotes	circular chromosomes&nbsp;
+how is DNA organised in mitochondria	circular
+name a eukariotic cell that contains plasmids	yeast
+name an organelle in which DNA is organised into circular chromosomes	chloroplast
+what is transcription	the first stage of protein synthesis
+name the enzyme responsible for the synthesis of mRNA in transcription	RNA polymerase
+name two characteristics of stem cells	1. they can self renew<div>2. they can differentiate into specialized cells</div>
+name the type of stem cell capable of differentiating into all types of cell	totipotent&nbsp;
+give one example of an ethical issue that using stem cells raises	source of embryonic stem cells. some believe it is unethical to destroy embryos
+what is phylogenetics	evolutionary relatedness among different groups of organisms&nbsp;
+what is the purpose of molecular clocks	to date the origins of groups of organisms and to show the sequence in which they evolved
+give two properties of an enzyme	1. specific to one subtrate<div>2. flexible and dynamic to create an induced fit</div>
+what can bacteria do&nbsp;	some bacteria can transfer plasmids or pieces of chromosomal DNA to each other or take up DNA from their environment to produce new strains
+give two examples of mutagenic agents	radioactive sources<div>UV light</div>
+what is the name given to the study of animal behaviour	ethology
+some monkeys were observed chewing their tails, what is the name given to this behaviour	misdirected
+provide two examples of how misdirected behavior in monkeys can be reduced	enriching their environment<div>providing a companion</div><div><br></div>
+what is appeasement behaviour	"<b style=""color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;"">Appeasement behavior</b><span style=""color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;"">&nbsp;is a form of social&nbsp;</span><b style=""color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;"">behavior</b><span style=""color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 16px;"">&nbsp;in which one party seeks to pacify the aggression of another by taking an inferior social stance. This occurs amongst both animals and humans.</span>"
+what is symbiosis	relationship/association between two different species
+what is mutualism	benefit for both species
+in DNA where are the deoxyribose and phosphate found	deoxyribose on 3' end<div>phosphate on 5' end</div>
+what does DNA polymerase require	primers
+gene expression is controlled by regulating	both translation and transcription
+what is the name of the protein that combines with sodium ions and helps movie them across the cell membrane	carrier
+to survive cold conditions animals have	a round and compact body shape
+what characteristics so perennial weeds usually possess	possess storage organs and can reproduce asexually
+what is animal welfare?	ensures animals that are used in the human food chain are killed humanely
+what is biodiversity	"<span style=""color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small;"">the variety of plant and animal life in the world or in a particular habitat</span>"
+what is an invasive species	"<span style=""color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: small;"">An invasive species is a plant, fungus, or animal species that is not native to a specific location, and that has a tendency to spread to a degree believed to cause damage to the environment, human economy or human health</span>"
+what is the feature of a DNA molecule that determines its melting point	the hydrogen bonds between the bases
+how is a molecule of DNA arranged so that one strand does not get mixed up with the other strands in the nucleus. 2 marks	molecule forms very tight coil.<div>molecule attaches to protein forming very compact DNA protein complex</div>
+name the enzyme that causes the DNA to replicate in the PCR process	DNA Polymerase
+give two properties of meristems	specialized<div>capable of repeated cell division</div>
+what is induced fit	when an enzyme encounters a suitable substrate, the active site changes shape to fit the substrate molecule
+what is end product inhibition	when the end product of an enzyme catalyzed reaction accumulates and it causes the activity of the enzyme involved, to decrease or stop temporarily
+why is it important for animals to control their body temperatures	enzymes only work within a narrow range of temperatures
+what are the two different types of migration<br>	innate and learned
+what is an example of innate influences	genetic control/ inheritance
+what is an example of a learned influence	acquiring knowledge from parents/ trial and error
+which two of the vertebrate groups can be described as double and incomplete<br>	amphibians and birds
+what is aestivation	a form of dormancy employed by some animals to survive periods of excessive heat and drought
+what are the culture conditions that must be controlled in the growth of microorganisms&nbsp;	temperature, oxygen levels, pH
+what are the properties of annual weeds	rapid growth, short life cycle
+what is misdirected behaviour	a behavioural indicator which involves an animal mutilating itself ex. chewing on its own hair
+what describes mutualism	both organisms benefit from the relationship, illustrating interdependance
+which forms of biodiversity are measurable	genetic, species, ecosystem
+what is a histone	"<span style=""display: inline !important; float: none; background-color: rgb(255, 255, 255); color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;""> protein bundles that allow DNA to become tightly coiled around them</span>"
+what is a primer	<div>short sequence DNA nucleotides of formed at the 3 end of the parental DNA to be replicated</div><div>Its presence is required for DNA polymerase to begin DNA replication</div>
+what is the use of DNA ligase in DNA replication	joins fragments of DNA together
+what is bioinformatics	the study of comparative gene sequences using computers and statistics
+what is sequence data	used to study the evolutionary relatedness among groups of organisms
+where might a single gene mutation occur	protein coding region of DNA
+<br>	<br>
+suggest one possible effect of a single gene mutation on gene expression	protein not synthesised
+explain the evolutionary importance of a mutation	<div>source of new variation</div><div>new alleles of genes arise from mutation&nbsp;</div><div>without mutation no variation would exist in organisms</div><div>some alleles formed from mutation can offer a survival advantage</div>
+give an example of the media that may be added to microorganisms to stimulate growth<br>	vitamins/ fatty acids/ beef extract/ blood
+describe the full process of transcription	<div>1. DNA unzips as hydrogen bonds break</div><div>2. RNA nucleotides pair with DNA bases</div><div>3. guanine pairs with cytosine, uracil pairs with adenine</div><div>4. RNA polymerase can only add nucleotides to the 3 end of the growing mRNA molecule</div><div>5. primary transcript is formed</div><div>6. coding regions are exons, non coding regions are introns</div><div>7. splicing forms mature transcript</div><div>8.mRNA leaves the nucleus</div><div><br></div>
+describe the full process of translation	<div>1. translation of mRNA into a polypeptide by tRNA at the ribosome</div><div>2. RNA folds due to base pairing to form a triplet anticodon site an attachment site for a specific amino acid</div><div>3. triplet codons on mRNA and anticodons translate the genetic code into a sequence of amino acids</div><div>4. start and stop codons exist</div><div>5. codon recognition of incoming tRNA</div><div>6. peptide bond formation</div><div>7. exit of tRNA from the ribosome as polypeptide of formed</div>
+describe kin selection 3 marks	<div>1.altruism is more common between kin individulas</div><div>2. donor can benefit indirectly through their genes</div><div>3. increased chance of shared genes surviving&nbsp;</div><div>&nbsp;</div>
+describe primate behaviour 5 marks	"<div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">1. primates have a long period of parental care&nbsp;</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">2. this gives opportunity to learn complex social skills</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">3. primates use appeasement to reduce conflict</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">4. for example grooming fellow monkeys</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">5. their facial expression&nbsp;</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">6. individuals form alliances which increase social status&nbsp;</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;"">7. complexity of social structure is related to ecological niche/ research distribution</div><div style=""background-color: transparent; box-sizing: border-box; color: rgb(70, 74, 76); font-family: Arial; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;""><br></div>"
+state the final destination of NADH in respiration	electron transport chain
+where does the electron transport chain take place	on inner mitochondrial membrane/ cristae
+what do you use to measure the metabolic rate of a human&nbsp;	calorimeter
+name a respiratory substrate which is used after prolonged starvation	protein
+what is the name used to describe organisms which live at hot temperatures	extremophiles
+what do you call it when there is an increase of extinctions	mass extinction events
+what the name for when you plant crops in a different field	crop rotation
+what do you call a natural predator to a pest	biological control
+what is the risk of using a biological control	<div>if not introduced at the right time, the condition may not be right for predator to survive, or the infestation may already be beyond control</div><div><br></div><div>it may be non specific and target other organisms&nbsp;</div>
+the genetic material found in a Eukaryoic cell is&nbsp;	linear chromosomes
+what is a gene?	a section of DNA which carries the code for the production of one protein
+what is transcription	the synthesis of mRNA from a section of DNA
+what is translation	the synthesis of protein following the code with in the mature mRNA transcript
+what types of bonds are found in translation	peptide bonds
+what is cleavage	a single polypeptide chain can be cleaved by enzymes to make it active. eg insulin
+what are tissue cells	involved in maintaining and repairing the body
+what are the types of meristem	apical and lateral<div><br></div><div>apical found in tip of root adding length</div><div>lateral found inside cambium making stems thicker</div>
+what do non protein coding regions do?	1. protection of telomere prevents fraying<div>2. regulation of transcription (activatiors and repressors) help start and stop</div><div>3. non translated forms of DNA ie tRNA, rRNA</div>
+what are mutations	change in structure or amount of an organisms DNA
+what are the three different ways horizontal gene can occur	transformation<div>transduction</div><div>conjugation</div>
+what is transformation	when cells are destroyed bits of their DNA float around and be picked up by new cells
