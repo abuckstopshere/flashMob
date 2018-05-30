@@ -1,6 +1,7 @@
 import React , { Component } from 'react'
 import { Row , Col , Input , Button } from 'react-materialize'
 import Header from '../Header/Header'
+import Dropdown from 'react-materialize/lib/Dropdown';
 // import 'AddCard.css'
 
 class AddCard extends Component {
@@ -13,6 +14,7 @@ class AddCard extends Component {
                 </div>
                 <Row>
                     <Col s = {8} >
+                    
                         <Input s = {6} label = "Question" />
                         <Input s = {6} label = "Answer" />
                         <Button waves='light'>Submit</Button>
@@ -22,5 +24,6 @@ class AddCard extends Component {
         )
     }
 }
+
 
 export default AddCard
