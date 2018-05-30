@@ -5,8 +5,14 @@ import FacebookOAuth from './FacebookOAuth'
 const SocialLog = () => {
     return (
     <div className = "col 6 offset-6 middle">
-            <GoogleOAuth />
-            <FacebookOAuth />
+            <GoogleOAuth 
+                user = {this.props.user}
+                username = {this.props.username}
+                />
+            <FacebookOAuth 
+                user = {this.props.user}
+                username = {this.props.username}
+                />
     </div>
     )
 }
