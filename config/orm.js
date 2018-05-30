@@ -62,6 +62,23 @@ module.exports = orm = {
             })
         })
     },
+    getUserByEmail: (email) => {
+        let query = {
+            "email": email
+        }
+        return new Promise((resolve, reject) => {
+            getQuery(query, "USERS", (err, res) => {
+                if (err) {
+                    console.log("GetUserByEmail: Error at getOne query")
+                    reject(err)
+                } else if (res === null) {
+                    reject("No user matching that criteria found")
+                }
+                resolve(res)
+            })
+        })
+    },
+
 
     changeUserEmail: (userID, newEmail) => {
         let query = {
@@ -80,7 +97,7 @@ module.exports = orm = {
                     console.log("changeUserEmail: User not created, email conflict found. Returning conflicting objects")
                     reject(res)
                 } else {
-                    console.log("changeUserEmail: No conflicts found, creating user")
+                    console.log("changeUserEmail: No conflicts found, changing to " + newEmail)
                     updateEntry(query, {
                         $set: updateArg
                     }, "USERS", (err, res) => {
@@ -114,7 +131,7 @@ module.exports = orm = {
     // name, and an array of strings for later indexing and searching by category
     // No validation required, users can have multiple sets with same names. Each set
     // though will be assigned a unique _id field by mongoDB
-    createSet: (userID, setName, categories, cb) => {
+    createSet: (userID, setName, categories) => {
         let newSet = {
             FK: userID,
             setName: setName,
@@ -294,7 +311,7 @@ function getQuery(query, cnName, cb) {
 }
 
 function updateEntry(query, updateData, cnName, cb) {
-    updateData.updated_at = Date.now()
+    // updateData.updated_at = Date.now()
     MongoClient.connect(url, function (err, client) {
         if (err) {
             throw err
