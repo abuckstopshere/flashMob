@@ -21,7 +21,7 @@ const Header = (props) => {
                     </div>
                     <div className = "right">
                         <ul>
-                            <li>{props.welcome}</li>
+                            <li className="smallText">{props.welcome}</li>
                             <li><Logout /></li>
                         </ul>
                     </div>
