@@ -1,4 +1,4 @@
-var orm = require("../config/orm");
+var orm = require("../../config/orm")
 
 // Routes
 // =============================================================
@@ -7,7 +7,9 @@ module.exports = function (app) {
     // GET route for getting all of the todos
     app.get("/api/User/:ID", function (req, res) {
         orm.getUserByID(req.params)
-            .then(user => res.json(results));
+            .then(((fulfilled) => {
+                console.log(fulfilled)
+            }));
     });
 
     app.get("/api/Sets/:authorID", function (req, res) {
@@ -123,4 +125,3 @@ module.exports = function (app) {
     });
 
 };
-

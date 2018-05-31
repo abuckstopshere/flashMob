@@ -72,9 +72,9 @@ class App extends Component {
                   redirectToDash = {this.state.redirectToDash}
                   />}
             /> 
-            <Route exact path = '/AddSet' component = {AddSet} />
-            <Route exact path = '/AddCard' component = {AddCard} />
-            <Route exact path = '/Search' component = {Search} />
+            <Route exact path = '/AddSet' render = {()=> <AddSet />} />
+            <Route exact path = '/AddCard' render = {()=> <AddCard />} />
+            <Route exact path = '/Search' render = {()=> <Search />} />
         </Switch> 
       </BrowserRouter>
     )

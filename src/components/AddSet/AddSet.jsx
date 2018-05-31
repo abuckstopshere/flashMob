@@ -1,25 +1,22 @@
 import React , { Component } from 'react'
 import { Row , Col , Input , Button } from 'react-materialize'
 import Header from '../Header/Header'
-import Dashboard from '../Dashboard/Dashboard';
-
-
-
-// import 'AddSet.css'
+import Dashboard from '../Dashboard/Dashboard'
+// import app from '../../routes/api-routes'
 
 const AddSet = (props) => {
         return(
         <div>
-            <Row>
+            <div className = "row">
                 <Header />
-            </Row>
-            <Row>
+            </div>
+            <div className = "row">
                 <Col s = {8} >
                     <Input s = {6} label = "Name" />
                     <Input s = {6} label = "Categories" />
                     <Button waves='light'>Submit</Button>
                 </Col>
-            </Row>
+            </div>
         </div>
         )
     }
