@@ -61,6 +61,8 @@ purgeTestCases()
 orm.createUser(uto.familyName, uto.givenName, uto.email, uto.auth)
     .then((fulfilled) => {
         userID = fulfilled.ops[0]._id
+        console.log(fulfilled)
+        console.log(fulfilled.ops[0])
         console.log("User CRUD Test SUCCESS: User created")
         return userID
     })
@@ -193,7 +195,7 @@ function runSecondSeries() {
 
 function runThirdSeries() {
     console.log("Card CRUD Test INITIALIZED")
-    
+
 
 }
 

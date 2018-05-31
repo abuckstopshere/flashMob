@@ -5,7 +5,7 @@ let [nodePath, filePath, setName, setCategory, fileName] = process.argv
 // This is the function that would read your input from the CLI.
 // Uncomment this to use the CLI to import files
 
-// generalSetImport(setName, setCategory, fileName)
+generalSetImport(setName, setCategory, fileName)
 
 // These functions are already filled out according to txt files I provided.
 // Do not uncomment all three and run, the connections will time out and you'll get 
