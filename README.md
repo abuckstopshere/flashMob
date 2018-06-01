@@ -29,17 +29,23 @@ check out our deployed site here!
 [vu vo](https://github.com/kingdavid930)
 
 
-# GETTING STARTED
-first,
+## getting started
+firstly, you will want to ( fork at discretion )
+```
+    git clone git@github.com:abuckstopshere/flashMob.git
+```
+
+then you will want to 
 
 ```
     npm install
 ```
 
-# RUNNING THE TEST
+
+## running the test
 to gain a bit of understanding about the functionality of our application, navigate to the testing template [here!](https://github.com/abuckstopshere/flashMob.git)
 
-# TESTING AND FUNCTIONS
+## testing + functions
 once getting the template running, you can edit html // css // javascript files
 
     here is a full list of functions you can run! enjoy!
