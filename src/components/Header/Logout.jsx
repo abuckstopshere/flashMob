@@ -1,13 +1,11 @@
-import React , { Component } from 'react'
+import React from 'react'
 
-class Logout extends Component {
-    render() {
+const LogOut = (props) => {
         return (
-            <a href = "/">
+            <a onClick = {props.handleLogOut}>
                 Logout
             </a>
         )
-    }
 }
 
-export default Logout
+export default LogOut

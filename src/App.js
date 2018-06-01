@@ -3,9 +3,6 @@ import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import './App.css'
 import SocialLog from './components/SocialLog/SocialLog'
 import Dashboard from './components/Dashboard/Dashboard'
-import Search from './components/Search/Search'
-import AddSet from './components/AddSet/AddSet'
-import AddCard from './components/AddCard/AddCard'
 
 class App extends Component {
   constructor(props) {
@@ -72,9 +69,6 @@ class App extends Component {
                   redirectToDash = {this.state.redirectToDash}
                   />}
             /> 
-            <Route exact path = '/AddSet' render = {()=> <AddSet />} />
-            <Route exact path = '/AddCard' render = {()=> <AddCard />} />
-            <Route exact path = '/Search' render = {()=> <Search />} />
         </Switch> 
       </BrowserRouter>
     )

@@ -1,13 +1,11 @@
-import React , { Component } from 'react'
+import React from 'react'
 
-class Home extends Component {
-    render() {
-        return (
-            <a href = "/Dashboard">
-                Home
-            </a>
-        )
-    }
-}
+const Home = (props) => {
+    return (
+        <a onClick = {props.handleDashView}>
+            Home
+        </a>
+    )
+}   
 
 export default Home

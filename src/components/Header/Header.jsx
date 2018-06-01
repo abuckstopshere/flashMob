@@ -1,11 +1,8 @@
 import React from 'react'
 import './Header.css'
-import Logo from './Logo'
+// import Logo from './Logo'
 import Home from './Home'
-import Search from './SearchCards'
-import AddASet from '../Header/AddASet'
-import AddACard from '../Header/AddACard'
-import Logout from '../Header/Logout'
+import LogOut from '../Header/LogOut'
 
 const Header = (props) => {
         return (
@@ -13,16 +10,23 @@ const Header = (props) => {
                 <div className = "nav-wrapper">
                     <div className = "left">
                         <ul>
-                            <li><Home /></li>
-                            <li><Search /></li>
-                            <li><AddASet /></li>
-                            <li><AddACard /></li>
+                            <li>
+                                <Home 
+                                    dashView = {props.dashView}
+                                    handleDashView = {props.handleDashView}
+                                />
+                            </li>
                         </ul>
                     </div>
                     <div className = "right">
                         <ul>
                             <li className="smallText">{props.welcome}</li>
-                            <li><Logout /></li>
+                            <li>
+                                <LogOut 
+                                    logOut = {props.logOut}
+                                    handleLogOut = {props.handleLogOut}
+                                />
+                            </li>
                         </ul>
                     </div>
                 </div>
