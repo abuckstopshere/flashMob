@@ -3,11 +3,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-var app = express();
+const app = express();
 
-var router = require("./routes/api-routes.js")
+const router = require("./routes/api-routes.js")
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json())
