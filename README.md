@@ -18,7 +18,7 @@ check out our deployed site here!
 [flashMob!](https://www.flashmawb.com)
 
 ## our team :
-[andrew buckley](https://github.com/abuckstopshere)
+[andrew buckley](https://github.com/abuckstopshere) // [reach out on linkedin!](https://www.linkedin.com/in/andrewalexbuckley/)
 
 [michael malach](https://github.com/MarchosiasM)
 
@@ -48,7 +48,7 @@ to gain a bit of understanding about the functionality of our application, navig
 ## testing + functions
 once getting the template running, you can edit html // css // javascript files
 
-    here is a full list of functions you can run! enjoy!
+### here is a full list of functions you can run! enjoy!
 
 ```
     getUserbyId(){
