@@ -60,14 +60,15 @@ class App extends Component {
                   username = {this.state.username}
                   responseGoogle = {this.responseGoogle}
                   responseFacebook = {this.responseFacebook}
-                  redirectToDash = {this.state.redirectToDash} />} 
+                  redirectToDash = {this.state.redirectToDash} 
+                />} 
             />
             <Route exact path = '/Dashboard'  render = {()=> 
                 <Dashboard
                   username = {this.state.username}
                   welcome = {this.state.welcome} 
                   redirectToDash = {this.state.redirectToDash}
-                  />}
+                />}
             /> 
         </Switch> 
       </BrowserRouter>
