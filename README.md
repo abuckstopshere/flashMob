@@ -20,13 +20,13 @@ check out our deployed site here!
 ## our team :
 [andrew buckley](https://github.com/abuckstopshere) // [reach out on linkedin!](https://www.linkedin.com/in/andrewalexbuckley/)
 
-[michael malach](https://github.com/MarchosiasM)
+[michael malach](https://github.com/MarchosiasM) // [reach out on linkedin!](https://www.linkedin.com/in/michael-malach-22ab2639/)
 
-[nicole sevillano](https://github.com/s3vi26)
+[nicole sevillano](https://github.com/s3vi26) // [reach out on linkedin!](https://www.linkedin.com/in/s3vi26/)
 
-[steven mezzacappa](https://github.com/smezzacappa)
+[steven mezzacappa](https://github.com/smezzacappa) // [reach out on linkedin!](https://www.linkedin.com/in/steven-mezzacappa/)
 
-[vu vo](https://github.com/kingdavid930)
+[vu vo](https://github.com/kingdavid930) // [reach out on linkedin!](https://www.linkedin.com/in/vu-vo-3956976a/)
 
 
 ## getting started
