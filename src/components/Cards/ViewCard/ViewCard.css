@@ -9,7 +9,7 @@
 }
 
 .card {
-    background : url('../../images/ruledPaper.jpg') center no-repeat;
+    background : url('../../../images/ruledPaper.jpg') center no-repeat;
     text-align: center ;
     height : 300px ;
     width : 400px ;
@@ -22,4 +22,9 @@
 .card:hover {
     transform : rotateY(180deg) ;
     transition : all 0.2s ease-in-out ;
+}
+
+
+.validate {
+    color: rgba(255, 255, 255, 0.75);
 }

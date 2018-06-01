@@ -3,7 +3,14 @@ welcome to our wonderful flashcard program!
 
 ## overview
 here's some information about our flashcard project.
-we made use of :
+
+we made use of some pretty cool features such as, but not limited to :
+
+    ~ mongoDb
+
+    ~ react
+
+    ~ amazon web services
 
 ## deployed site
 check out our deployed site here!
@@ -20,3 +27,77 @@ check out our deployed site here!
 [steven mezzacappa](https://github.com/smezzacappa)
 
 [vu vo](https://github.com/kingdavid930)
+
+
+# GETTING STARTED
+first,
+
+```
+    npm install
+```
+
+# RUNNING THE TEST
+to gain a bit of understanding about the functionality of our application, navigate to the testing template [here!](https://github.com/abuckstopshere/flashMob.git)
+
+# TESTING AND FUNCTIONS
+once getting the template running, you can edit html // css // javascript files
+
+    here is a full list of functions you can run! enjoy!
+
+```
+    getUserbyId(){
+        return
+    }
+
+    changeUserEmail(){
+        return
+    }
+
+    deleteUser(){
+        return
+    }
+
+    createSet(){
+        return
+    }
+
+    getSetByAuthor(){
+        return
+    }
+
+    getSetByCategory(){
+        return
+    }
+
+    getSetAll(){
+        return
+    }
+
+    addSetCategory(){
+        return
+    }
+
+    deleteSet(){
+        return
+    }
+
+    createSet(){
+        return
+    }
+
+    getCardsBySet(){
+        return
+    }
+
+    updateCardFields(){
+        return
+    }
+
+    updateCardsSet(){
+        return
+    }
+
+    deleteCardById(){
+        return
+    }
+```

@@ -3,9 +3,6 @@ import { BrowserRouter , Switch , Route } from 'react-router-dom'
 import './App.css'
 import SocialLog from './components/SocialLog/SocialLog'
 import Dashboard from './components/Dashboard/Dashboard'
-import Search from './components/Search/Search'
-import AddSet from './components/AddSet/AddSet'
-import AddCard from './components/AddCard/AddCard'
 
 class App extends Component {
   constructor(props) {
@@ -63,18 +60,16 @@ class App extends Component {
                   username = {this.state.username}
                   responseGoogle = {this.responseGoogle}
                   responseFacebook = {this.responseFacebook}
-                  redirectToDash = {this.state.redirectToDash} />} 
+                  redirectToDash = {this.state.redirectToDash} 
+                />} 
             />
             <Route exact path = '/Dashboard'  render = {()=> 
                 <Dashboard
                   username = {this.state.username}
                   welcome = {this.state.welcome} 
                   redirectToDash = {this.state.redirectToDash}
-                  />}
+                />}
             /> 
-            <Route exact path = '/AddSet' component = {AddSet} />
-            <Route exact path = '/AddCard' component = {AddCard} />
-            <Route exact path = '/Search' component = {Search} />
         </Switch> 
       </BrowserRouter>
     )
