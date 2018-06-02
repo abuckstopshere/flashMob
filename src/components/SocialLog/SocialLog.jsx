@@ -1,6 +1,6 @@
 import React from 'react'
-import GoogleOAuth from './GoogleOAuth'
-import FacebookOAuth from './FacebookOAuth'
+import GoogleOAuth from './GoogleOAuth.jsx'
+import FacebookOAuth from './FacebookOAuth.jsx'
 
 const SocialLog = (props) => {
 

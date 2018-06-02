@@ -1,8 +1,8 @@
 import React from 'react'
 import './Header.css'
 // import Logo from './Logo'
-import Home from './Home'
-import LogOut from '../Header/LogOut'
+import Home from './Home.jsx'
+import LogOut from '../Header/LogOut.jsx'
 
 const Header = (props) => {
         return (

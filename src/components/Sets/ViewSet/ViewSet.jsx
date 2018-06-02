@@ -4,11 +4,13 @@ import './ViewSet.css'
 class ViewSet extends Component {
     
     grabAllSets = () => {
-        fetch('/api/Sets')
+        fetch('api/user' , {
+            method: 'GET' 
+        })
         .then(results => {
             console.log(results)
-        })
-    }
+            })
+        }
     
     render() {
         return(
