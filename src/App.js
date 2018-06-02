@@ -148,11 +148,9 @@ class App extends Component {
           <Switch>
             <Route exact path = '/' render = {()=> 
                 <SocialLog 
-                  user = {this.state.user}
-                  username = {this.state.username}
+                  {...this.state}
                   responseGoogle = {this.responseGoogle}
                   responseFacebook = {this.responseFacebook}
-                  redirectToDash = {this.state.redirectToDash} 
                 />} 
             />
             <Route exact path = '/Dashboard'  render = {()=> 

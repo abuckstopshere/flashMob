@@ -1,6 +1,6 @@
 import React from 'react'
-import AddCardButton from './AddCard/AddCardButton'
-import ViewCardButton from './ViewCard/ViewCardButton'
+import AddCardButton from './AddCard/AddCardButton.jsx'
+import ViewCardButton from './ViewCard/ViewCardButton.jsx'
 
 const CardOpts = (props) => {
     return(

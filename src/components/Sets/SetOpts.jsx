@@ -1,6 +1,6 @@
 import React from 'react'
-import AddSetButton from './AddSet/AddSetButton'
-import ViewSetButton from './ViewSet/ViewSetButton'
+import AddSetButton from './AddSet/AddSetButton.jsx'
+import ViewSetButton from './ViewSet/ViewSetButton.jsx'
 
 const SetOpts = (props) => {
     return(
